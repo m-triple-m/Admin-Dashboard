@@ -1,0 +1,58 @@
+<!-- <div class="container-fluid mt-5" *ngIf="admin"> 
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <mat-card> 
+                        <mat-card-content class="card-body">
+                            <img [src]="seller.avatar" class="rounded-circle">
+                            <h4>Hello, {{admin.name}}</h4>
+                            <h4>{{admin.email}}</h4>
+ 
+                            <hr>
+                            <button (click)="togglemanageuser()">ManageUsers</button>
+                            <button (click)="togglemanageseller()">ManageSeller</button>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                
+                <div class="col-md-8">
+                    <mat-card>
+                        <mat-card-content class="card-body">
+                            
+                        </mat-card-content>
+                    </mat-card>
+                    <app-manageuser *ngIf="showmanageuser"></app-manageuser>
+                    <app-manageseller *ngIf="showmanageseller"></app-manageseller>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 sidebar text-center">
+            <img [src]="'assets/img/testimonials-1.jpg'" class="rounded-circle" style="height: 10rem;">
+            <h4>Hello, {{admin.name}}</h4>
+            <h4>{{admin.email}}</h4>
+            <hr>
+            <button (click)="togglemanageuser()" mat-button class="btn-block mt-3" style="background-color: rgba(240, 248, 255, 0.1);">Manage Users</button>
+            <button (click)="togglemanageseller()" mat-button class="btn-block mt-3" style="background-color: rgba(240, 248, 255, 0.1);">Manage Sellers</button>
+            <button (click)="toggleShowStats()" mat-button class="btn-block mt-3" style="background-color: rgba(240, 248, 255, 0.1);">Webiste Stats</button>
+            <button mat-button class="btn-block mt-3" style="background-color: rgba(240, 248, 255, 0.1);">Control1</button>
+
+        </div>
+        <div class="col-10 panel">
+            <div class="row justify-content-center">
+                <div class="col-11">
+                    <h1>Admin Dashboard</h1>
+                    <hr>
+                    <app-manageuser *ngIf="showmanageuser"></app-manageuser>
+                    <app-manageseller *ngIf="showmanageseller"></app-manageseller>
+                    <app-web-stats *ngIf="showstats"></app-web-stats>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

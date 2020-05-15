@@ -1,0 +1,15 @@
+.card-content, .card-content-mini, .card-content-top{
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.13);
+}
+
+.card-content{
+    height: 25rem;
+}
+
+.card-content-mini{
+    height: 12rem;
+}
+
+.card-content-top{
+    height: 17rem;
+}
